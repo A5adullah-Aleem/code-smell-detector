@@ -1,0 +1,13 @@
+<!-- templates/report.html -->
+<h2>Code Analysis Report</h2>
+<p>{{ report|length }} anti-patterns detected</p>
+<ul>
+  {% for item in report %}
+  <li>
+    <strong>File:</strong> {{ item.file }}<br />
+    <strong>Type:</strong> {{ item.type }}<br />
+    <strong>Line:</strong> {{ item.line }}<br />
+    <strong>Message:</strong> {{ item.message }}
+  </li>
+  {% endfor %}
+</ul>
